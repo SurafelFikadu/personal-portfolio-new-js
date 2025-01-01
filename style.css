@@ -1,0 +1,631 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* --- Dark mode and light mode start  --- */
+
+:root {
+    --primary-color: #000311;
+    --secondary-color: #fff;
+    --third-color: rgb(128, 79, 79);
+    --accent: hsl(153, 71%, 59%);
+    --input-bg: #444242;
+    --input-color: #ddd;
+}
+
+.light-theme {
+    --primary-color: #e3eaff;
+    --secondary-color: #212121;
+    --third-color: white;
+    --accent: hsl(153, 93%, 33%);
+    --input-bg: #d3d7d8;
+    --input-color: #333;
+}
+
+#icon {
+    width: 30px;
+    cursor: pointer;
+}
+
+nav ul {
+    flex: 1;
+    text-align: right;
+}
+
+body {
+    background: var(--primary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--secondary-color);
+
+}
+
+/* --- Dark mode and light mode finish  ---*/
+
+/* -- */
+#menu {
+    display: none;
+}
+
+.menu-logo {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.ul-light {
+    display: flex;
+    align-items: center;
+}
+
+.close-ul {
+    display: flex;
+    align-items: center;
+}
+
+#close {
+    display: none;
+}
+
+/*  */
+
+.hero {
+    height: 100vh;
+    width: 100%;
+    background: var(--primary-color);
+    font-family: sans-serif;
+    position: relative;
+    max-width: 1450px;
+}
+
+nav {
+    width: 90%;
+    margin: auto;
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 130px;
+    cursor: pointer;
+}
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--secondary-color);
+}
+
+nav ul li a:hover {
+    color: rgb(19, 19, 206);
+}
+
+.info {
+    margin-left: 5%;
+    margin-top: 15%;
+    width: 50%;
+}
+
+.info h1 {
+    font-size: 70px;
+    color: var(--secondary-color);
+    margin-bottom: 20px;
+}
+
+.info p {
+    width: 90%;
+}
+
+h1 span {
+    color: rgb(19, 19, 206);
+}
+
+.info p {
+    color: var(--secondary-color);
+    line-height: 22px;
+}
+
+.info a {
+    background: var(--secondary-color);
+    padding: 10px 18px;
+    text-decoration: none;
+    color: var(--primary-color);
+    display: inline-block;
+    margin: 30px 0;
+    border-radius: 5px;
+}
+
+.info a:hover {
+    background: rgb(19, 19, 206);
+    transition: 0.3s;
+}
+
+.img-box {
+    width: 30%;
+    height: 80%;
+    position: absolute;
+    bottom: 0;
+    right: 100px;
+}
+
+.img-box img {
+    height: 100%;
+    max-height: 700px;
+    max-width: 600px;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    right: 100px;
+    transform: translateX(-50%);
+    transition: bottom 1s, left 1s;
+}
+
+.img-box .back-img {
+    max-width: 400px;
+}
+
+.img-box:hover .back-img {
+    bottom: 90px;
+    left: 64%;
+}
+
+.img-box:hover .main-img {
+    left: 44%;
+}
+
+.social-links {
+    margin-left: 8%;
+    margin-top: 100px;
+}
+
+.social-links a {
+    font-size: 30px;
+    color: var(--secondary-color);
+    margin-right: 20px;
+}
+
+.social-links a:hover {
+    color: blue;
+}
+
+@media(max-width: 1100px) {
+    .img-box:hover .back-img {
+        bottom: 80px;
+    }
+}
+
+@media (max-width: 900px) {
+    .info h1 {
+        font-size: 64px;
+    }
+
+    .img-box:hover .back-img {
+        bottom: 70px;
+    }
+}
+
+@media (max-width: 850px) {
+    nav ul li {
+        margin: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    #menu {
+        display: block;
+    }
+
+    #close {
+        display: block;
+    }
+
+    .hero {
+        position: relative;
+    }
+
+    .close-ul {
+        /* display: none; */
+        position: absolute;
+        left: -360px;
+        top: 0;
+        background: var(--third-color);
+        flex-direction: column;
+        align-items: start;
+        width: 300px;
+        z-index: 2;
+        padding: 50px 30px;
+        gap: 50px;
+        height: 100vh;
+        display: flex;
+        transition: 0.3s;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+    }
+
+    /* --------------- */
+
+    .img-box {
+        display: none;
+    }
+
+    /* --------- */
+    .info {
+        width: 100%;
+    }
+
+    .info p {
+        width: 80%;
+    }
+
+}
+
+img {
+    cursor: pointer;
+}
+
+
+/* -------- about ------------- */
+/* -------- about ------------- */
+
+.about {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+
+    margin: auto;
+    margin-top: 12%;
+    margin-left: 7%;
+    margin-right: 5%;
+}
+
+.about .about-img {
+    width: 100%;
+    flex-basis: 33%;
+}
+
+.about-img img {
+    border: 5px solid var(--secondary-color);
+    border-radius: 15px;
+    max-width: 300px;
+}
+
+.about .about-me {
+    flex-basis: 64%;
+    color: var(--secondary-color);
+
+    line-height: 1.5;
+}
+
+.about-me h1 {
+    font-size: 41px;
+    margin-bottom: 20px;
+}
+
+.about-me p {
+    margin-bottom: 10px;
+    font-size: 21px;
+}
+
+@media (max-width: 860px) {
+    .about-me h1 {
+        font-size: 41px;
+        margin-bottom: 20px;
+    }
+
+    .about-me p {
+        margin-bottom: 10px;
+        font-size: 19px;
+    }
+}
+
+@media (max-width: 768px) {
+    .about {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+        /* text-align: center; */
+    }
+
+    .about .about-img,
+    .about-me h1 {
+        text-align: center;
+    }
+}
+
+/* ------------ Portfolio ------------- */
+/* ------------ Portfolio ------------- */
+/* ------------ Portfolio ------------- */
+
+.portfolio {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3%;
+    gap: 50px;
+    padding: 30px;
+}
+
+.portfolio>h1 {
+    font-size: 41px;
+    text-align: center;
+}
+
+.portfolio .my-works {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.my-works .two-works {
+    display: flex;
+    gap: 50px;
+}
+
+.two-works .my-work img {
+    width: 100%;
+}
+
+.my-work img {
+    width: 100%;
+}
+
+/* desktop design greater than 1000px */
+.my-work {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+    position: relative;
+}
+
+.my-work img {
+    cursor: context-menu;
+}
+
+.my-work .work-info h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.work-info .use {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.my-work ul {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    list-style: none;
+    position: absolute;
+    top: 40%;
+    visibility: hidden;
+}
+
+.my-work:hover ul {
+    visibility: visible;
+    transition: all 0.5s;
+}
+
+.my-work:hover img {
+    opacity: 0.2;
+    transition: all 0.5s;
+
+}
+
+.my-work ul li a {
+    text-decoration-line: none;
+    color: var(--secondary-color);
+    display: inline-block;
+    padding-bottom: 0.625rem;
+    font-size: 1rem;
+    line-height: 1.625;
+    letter-spacing: 0.143em;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--text1);
+    text-decoration: none;
+    background-image: linear-gradient(to right,
+            var(--accent) 75%,
+            var(--accent) 75%);
+    background-position: 0 2.1em;
+    background-repeat: repeat-x;
+    background-size: 8px 2px;
+}
+
+.my-work ul li a:hover {
+    color: var(--accent);
+}
+
+.portfolio .see-more {
+    padding: 10px 20px;
+    border: 3px solid var(--accent);
+    transition: 0.3s;
+}
+
+.portfolio .see-more:hover {
+    background-color: var(--accent);
+}
+
+.see-more a {
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-weight: bold;
+}
+
+/* from 1000px to 600px */
+@media (max-width: 1000px) {
+    .my-work ul {
+        position: static;
+        visibility: visible;
+    }
+
+    .my-work:hover ul {
+        visibility: visible;
+    }
+
+    .my-work:hover img {
+        opacity: 1;
+    }
+}
+
+@media(max-width: 930px) and (min-width: 830px) {
+    .my-work .work-info h2 {
+        font-size: 28px;
+    }
+
+    .work-info .use {
+        gap: 20px;
+    }
+}
+
+@media(max-width: 830px) and (min-width: 768px) {
+    .my-work .work-info h2 {
+        font-size: 24px;
+    }
+
+    .work-info .use {
+        gap: 15px;
+    }
+}
+
+@media(max-width: 768px) {
+    .two-works {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 490px) {
+    .portfolio>h1 {
+        font-size: 32px;
+    }
+
+    .my-work .work-info h2 {
+        font-size: 24px;
+    }
+
+    .work-info .use {
+        gap: 25px;
+    }
+}
+
+/* --------contant or hire-me ------------ */
+/* --------contant or hire-me ------------ */
+/* --------contant or hire-me ------------ */
+/* --------contant or hire-me ------------ */
+.hire-me {
+    display: flex;
+    margin-top: 5%;
+    padding: 5%;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hire-me .contact {
+    flex-basis: 50%;
+}
+
+.contact h1 {
+    font-size: 64px;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.contact p {
+    line-height: 1.5;
+    font-size: 24px;
+}
+
+.hire-me .form {
+    flex-direction: 50%;
+    margin-right: 5%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.form input,
+.form textarea {
+    padding: 15px 20px;
+    margin: 10px 0;
+    font-size: 1.2rem;
+    outline: none;
+    border-radius: 15px;
+    background: var(--input-bg);
+    color: var(--secondary-color);
+    border: none;
+    width: 100%;
+}
+
+.form input::placeholder,
+.form textarea::placeholder {
+    color: var(--input-color);
+}
+
+.form button {
+    padding: 10px;
+    background-color: var(--accent);
+    color: var(--secondary-color);
+    font-size: 1.2rem;
+    width: 50%;
+    border-radius: 10px;
+    border: none;
+    margin-top: 10px;
+}
+
+.form button:hover {
+    background-color: rgb(1, 255, 14);
+    transition: all 0.3s;
+    color: #fff;
+}
+
+.form .success-msg {
+    position: absolute;
+    bottom: 0;
+    left: 20%;
+    font-size: 0;
+    text-align: center;
+    color: var(--accent);
+}
+
+.form .success {
+    bottom: 40%;
+    font-size: 24px;
+    transition: all 0.5s;
+}
+
+@media (max-width: 768px) {
+    .hire-me {
+        flex-direction: column;
+        align-items: start;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .form input,
+    .form textarea {
+        width: 300px;
+    }
+}

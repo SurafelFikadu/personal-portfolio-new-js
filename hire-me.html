@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
+    <title>Hire Me</title>
+  </head>
+  <body>
+    <div class="hero">
+      <nav>
+        <div class="menu-logo">
+          <img id="menu" src="images/icon-menu.svg" alt="" />
+          <img src="images/sure-Ethiopia.png" alt="" class="logo" />
+        </div>
+        <div class="ul-light">
+          <div class="close-ul">
+            <img id="close" src="images/icon-close.svg" alt="" />
+            <ul>
+              <li><a href="index.html">HOME</a></li>
+              <li><a href="about.html">ABOUT</a></li>
+              <li><a href="portfolio.html">PORTFOLIO</a></li>
+              <li><a href="hire-me.html">CONTANCT</a></li>
+            </ul>
+          </div>
+          <img src="images/sun.png" alt="" id="icon" />
+        </div>
+      </nav>
+      <div class="hire-me">
+        <div class="contact">
+          <h1>Contant</h1>
+          <p>
+            I would love to hear about your project and how I could help. Please
+            fill in the form, and I'll get back to you as soon as possible.
+          </p>
+          <div class="social-links">
+            <a target="_blank" href="https://www.linkedin.com/in/surafelfikadu"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+            <a target="_blank" href="https://twitter.com/surafelfikad"
+              ><i class="fab fa-twitter"></i
+            ></a>
+            <a target="_blank" href="https://instagram.com/sura122133"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a target="_blank" href="https://github.com/SurafelFikadu"
+              ><i class="fab fa-git"></i
+            ></a>
+          </div>
+        </div>
+        <form name="submit-to-google-sheet" class="form" action="">
+          <input id="name" name="Name" type="text" placeholder="Your Name" />
+          <input
+            id="email"
+            name="Email"
+            type="email"
+            placeholder="Your Email"
+          />
+          <textarea
+            placeholder="Your Message"
+            name="Message"
+            id="message"
+            cols="33"
+            rows="10"
+          ></textarea>
+          <button type="submit">Submit</button>
+          <div class="success-msg">Message sent Successfully</div>
+        </form>
+      </div>
+    </div>
+    <script src="script.js"></script>
+
+    <script>
+      const scriptURL =
+        "https://script.google.com/macros/s/AKfycbxQ4VWtkYlMrGlFD_i3WpzHLhCAvRJ3IyhFo9R3u-lDC6qH8YPviU6elRuAm7_Gcj8R-A/exec";
+      const form = document.forms["submit-to-google-sheet"];
+      const successMsg = document.querySelector(".success-msg");
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        fetch(scriptURL, { method: "POST", body: new FormData(form) })
+          .then((response) => {
+            successMsg.classList.add("success");
+            setTimeout(() => {
+              successMsg.classList.remove("success");
+            }, 3000);
+            form.reset();
+            console.log("Success!", response);
+          })
+          .catch((error) => console.error("Error!", error.message));
+      });
+
+      // https://script.google.com/macros/s/AKfycbxQ4VWtkYlMrGlFD_i3WpzHLhCAvRJ3IyhFo9R3u-lDC6qH8YPviU6elRuAm7_Gcj8R-A/exec
+    </script>
+  </body>
+</html>
