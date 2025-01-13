@@ -47,12 +47,13 @@ body {
 /* -- */
 #menu {
     display: none;
+    width: 25px;
 }
 
 .menu-logo {
     display: flex;
     align-items: center;
-    gap: 5px;
+    gap: 10px;
 }
 
 .ul-light {
@@ -67,6 +68,7 @@ body {
 
 #close {
     display: none;
+    width: 20px;
 }
 
 /*  */
@@ -235,7 +237,7 @@ h1 span {
     .close-ul {
         /* display: none; */
         position: absolute;
-        left: -360px;
+        right: -360px;
         top: 0;
         background: var(--third-color);
         flex-direction: column;
