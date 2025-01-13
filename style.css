@@ -39,7 +39,11 @@ body {
     justify-content: center;
     align-items: center;
     color: var(--secondary-color);
+    overflow-x: hidden;
+}
 
+.home {
+    overflow-y: hidden;
 }
 
 /* --- Dark mode and light mode finish  ---*/
